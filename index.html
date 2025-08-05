@@ -40,3 +40,63 @@
 
 </html>
 <!-- Fim do documento HTML -->
+
+Exemplos: 
+ Como usar e interligar HTML com CSS e JavaScript
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo HTML + CSS + JS</title>
+
+    <!-- Ligando um arquivo CSS externo -->
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Isso conecta seu HTML a um arquivo de estilo chamado "estilo.css" -->
+
+    <!-- Ligando um arquivo JavaScript externo -->
+    <script src="script.js" defer></script>
+    <!-- "defer" faz o script rodar depois que o HTML for carregado -->
+</head>
+<body>
+    <h1 id="titulo">Olá, mundo!</h1>
+    <button onclick="mudarTexto()">Clique aqui</button>
+    <!-- Botão que executa uma função JavaScript ao ser clicado -->
+</body>
+</html>
+
+/* CSS serve para estilizar o conteúdo HTML */
+
+body {
+    background-color: #f0f0f0; /* Cor de fundo da página */
+    font-family: Arial, sans-serif; /* Fonte do texto */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+h1 {
+    color: darkblue; /* Cor do título */
+    font-size: 36px; /* Tamanho da fonte */
+}
+
+button {
+    background-color: #007BFF; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Remove borda */
+    border-radius: 5px; /* Arredonda os cantos */
+    cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+}
+
+
+// JavaScript serve para adicionar interatividade à página
+
+// Esta função muda o texto do título ao clicar no botão
+function mudarTexto() {
+    const titulo = document.getElementById("titulo"); // Seleciona o elemento <h1>
+    titulo.innerText = "Texto alterado com sucesso!"; // Altera o conteúdo
+}
